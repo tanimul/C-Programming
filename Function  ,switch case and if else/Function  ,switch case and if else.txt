@@ -1,0 +1,170 @@
+#include<stdio.h>
+int add(int a, int b);
+int sub(int a, int b);
+int mul(int a, int b);
+int div(int a, int b);
+
+int main()
+{
+    int a, b, c, choice;
+    do{
+        printf("Enter 1st value: ");
+        scanf("%d",&a);
+        printf("Enter 2nd value: ");
+        scanf("%d",&b);
+        printf("\n\n\t 1. Addition\n\t 2. Subtraction\n\t 3. Multiply\n\t 4. Division\n\t 5. Exit\n\n");
+        printf("Enter your choice: ");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1: c = add(a,b);
+                        printf("Your result is %d\n", c);
+                        break;
+            case 2: c = sub(a,b);
+                        printf("Your result is %d\n", c);
+                        break;
+
+            case 3: c = mul(a,b);
+                        printf("Your result is %d\n", c);
+                        break;
+
+            case 4: c = div(a,b);
+                        printf("Your result is %d\n", c);
+                        break;
+
+            case 5: printf("Thanks for using our program.\n");
+                    break;
+
+            default:    printf("Wrong Choice!!!\n\n\n");
+
+        }
+    }while(choice!=5);
+    return 0;
+}
+
+int add (int a, int b)
+{
+    return a+b;
+}
+
+int sub (int a, int b)
+{
+    return a-b;
+}
+
+int mul (int a, int b)
+{
+    return a*b;
+}
+
+int div (int a, int b)
+{
+    if ( a < b )
+    {
+        printf("1st value can't be less than 2nd value.\n");
+        printf("Enter 1st value again: ");
+        scanf("%d",&a);
+        return a/b;
+    }
+
+    else if ( b == 0)
+    {
+        printf("2nd value can't be equal to zero.\n");
+        printf("Enter 2nd value again: ");
+        scanf("%d",&b);
+        return a/b;
+    }
+
+    else
+    {
+        return a/b;
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------
+
+#include<stdio.h>
+int add(int a, int b);
+int sub(int a, int b);
+int mul(int a, int b);
+int div(int a, int b);
+
+int main()
+{
+    int a, b, c, choice;
+    do{
+        printf("Enter 1st value: ");
+        scanf("%d",&a);
+        printf("Enter 2nd value: ");
+        scanf("%d",&b);
+        printf("\n\n\t 1. Addition\n\t 2. Subtraction\n\t 3. Multiply\n\t 4. Division\n\t 5. Exit\n\n");
+        printf("Enter your choice: ");
+        scanf("%d",&choice);
+        if(choice == 1){
+            c=add(a,b);
+            printf("Your result is %d\n",c);
+        }
+        else if(choice==2){
+        c=sub(a,b);
+        printf("your result is %d\n",c);
+        }
+        else if(choice==3){
+        c=mul(a,b);
+        printf("your result is %d\n",c);
+        }
+         else if(choice==3){
+        c=div(a,b);
+        printf("your result is %d\n",c);
+        }
+
+         else if(choice==5){
+             printf("Thanks for using our program.\n");
+         }
+
+            else{
+                 printf("Wrong Choice!!!\n\n\n");
+            }
+
+
+        }
+    while(choice!=5);
+    return 0;
+}
+
+int add (int a, int b)
+{
+    return a+b;
+}
+
+int sub (int a, int b)
+{
+    return a-b;
+}
+
+int mul (int a, int b)
+{
+    return a*b;
+}
+
+int div (int a, int b)
+{
+    if ( a < b )
+    {
+        printf("1st value can't be less than 2nd value.\n");
+        printf("Enter 1st value again: ");
+        scanf("%d",&a);
+        return a/b;
+    }
+
+    else if ( b == 0)
+    {
+        printf("2nd value can't be equal to zero.\n");
+        printf("Enter 2nd value again: ");
+        scanf("%d",&b);
+        return a/b;
+    }
+
+    else
+    {
+        return a/b;
+    }
+}

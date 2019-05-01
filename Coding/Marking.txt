@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int phy,mat,che,total,avrmark;
+    printf("enter the all sub marks\n\n");
+    scanf("%d %d %d",&phy,&mat,&che);
+    total=(phy+mat+che);
+    avrmark=total/3;
+    printf("total=%d avrage mark=%d ",total,avrmark);
+    if(avrmark>=80){
+        printf("grade : A");
+    }
+    if(80>avrmark>=60){
+        printf(" grade  : B");
+    }
+    if(60>avrmark>=40){
+        printf("grade : C");
+    }
+    if(avrmark>40){
+        printf("grade : F");
+    }
+
+    return 0;
+}

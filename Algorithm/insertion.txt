@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+  int n, array[1000],i,t;
+  printf("number of elements\n");
+  scanf("%d",&n);
+  printf("your number of element\n");
+  for (i=0;i<n;i++) {
+    scanf("%d",&array[i]);
+  }
+  for (i=0;i<n;i++) {
+    while(i>0&&array[i-1]>array[i]) {
+        t= array[i];
+        array[i]=array[i-1];
+        array[i-1]=t;
+        i--;
+    }
+  }
+
+  printf("Sorted list in ascending order:\n");
+
+  for (i= 0;i<n;i++) {
+    printf("%d",array[i]);
+  }
+
+  return 0;
+}
